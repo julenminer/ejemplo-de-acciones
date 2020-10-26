@@ -1,0 +1,27 @@
+name: 'Acción de repetición con Docker'
+author: 'Julen'
+description: 'Repite un número de veces el texto indicado'
+
+inputs:
+	inputText:
+		description: 'El texto que queremos repetir varias veces'
+		required: true
+	numOfRepeats:
+		description: 'Número de veces que queremos que aparezca el texto'
+		required: false
+		default: '1'
+
+outputs:
+	outputText:
+		description: 'El texto repetido el número de veces indicado'
+
+runs:
+	using: 'docker'
+	image: 'Dockerfile'
+	args:
+		- ${{ inputs.inputText }}
+		- ${{ inputs.numOfRepeats }}
+
+branding:
+	icon: 'rotate-cw'
+	color: 'blue'
