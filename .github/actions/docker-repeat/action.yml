@@ -3,24 +3,21 @@ author: 'Julen'
 description: 'Repite un número de veces el texto indicado'
 
 inputs:
-	inputText:
+	input_text:
 		description: 'El texto que queremos repetir varias veces'
 		required: true
-	numOfRepeats:
+	num_of_repeats:
 		description: 'Número de veces que queremos que aparezca el texto'
 		required: false
 		default: '1'
 
 outputs:
-	outputText:
+	output_text:
 		description: 'El texto repetido el número de veces indicado'
 
 runs:
 	using: 'docker'
 	image: 'Dockerfile'
-	args:
-		- ${{ inputs.inputText }}
-		- ${{ inputs.numOfRepeats }}
 
 branding:
 	icon: 'rotate-cw'
