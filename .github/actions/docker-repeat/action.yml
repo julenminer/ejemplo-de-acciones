@@ -3,7 +3,7 @@ author: 'Julen'
 description: 'Repite un número de veces el texto indicado'
 
 inputs:
-	input_text:
+  input_text:
 		description: 'El texto que queremos repetir varias veces'
 		required: true
 	num_of_repeats:
