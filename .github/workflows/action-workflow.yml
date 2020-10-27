@@ -9,3 +9,13 @@ jobs:
     
     steps:
       - uses: actions/checkout@v1
+        
+      - name: Docker repeat action
+        uses: ./.github/actions/docker-repeat
+        id: docker-action
+        with:
+          input_text: "texto de prueba"
+          num_of_repeats: "4"
+        
+      - name: Print docker output
+        run: echo ${{ steps.docker-action.outputs.output_text }}
