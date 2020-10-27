@@ -15,7 +15,7 @@ outputs:
   output_text:
     description: 'El texto repetido el número de veces indicado'
   
- runs:
+runs:
   using: 'docker'
   image: 'Dockerfile'
 
