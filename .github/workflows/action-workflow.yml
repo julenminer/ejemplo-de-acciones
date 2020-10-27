@@ -1,0 +1,11 @@
+name: Workflow for our actions
+
+on: [push]
+
+jobs:
+  run-docker-action:
+  
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v1
