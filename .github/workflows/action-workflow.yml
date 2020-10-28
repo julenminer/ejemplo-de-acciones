@@ -19,3 +19,20 @@ jobs:
         
       - name: Print docker output
         run: echo ${{ steps.docker-action.outputs.output_text }}
+
+  run-javascript-action:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: JavaScript repeat action
+        uses: ./.github/actions/js-repeat
+        id: js-action
+        with:
+          input_text: "texto de prueba"
+          num_of_repeats: "4"
+
+      - name: Print JavaScript output
+        run: echo ${{ steps.js-action.outputs.output_text }}
