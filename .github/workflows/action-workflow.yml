@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v1
         
       - name: Docker repeat action
-        uses: ./.github/actions/docker-repeat
+        uses: .github/actions/docker-repeat
         id: docker-action
         with:
           input_text: "texto de prueba"
@@ -28,7 +28,7 @@ jobs:
       - uses: actions/checkout@v1
 
       - name: JavaScript repeat action
-        uses: ./.github/actions/js-repeat
+        uses: .github/actions/js-repeat
         id: js-action
         with:
           input_text: "texto de prueba"
